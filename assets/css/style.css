@@ -110,13 +110,44 @@ img {
     border: none;
     font-size: 0.75rem;
 }
+.all_chat {
+    height: calc(100% - 151px);
+    background-color: var(--bz-light);
+}
 /* chat di destra */
+.current_chat {
+    height: 100%;
+}
 .last_access {
     color: var(--bz-darker);
 }
 .current_messages {
-    height: 100px;
-    background-image: url(../img/mine.jpg)
+    height: calc(100% - 112px);
+    padding: 3rem;
+    background-image: url(../img/mine.jpg);
+    font-size: 0.8rem;
+}
+.my_mess, .received_mess {
+    width: 35%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.my_mess {
+    align-self: flex-end;
+    background-color: var(--bz-primary);
+}
+.received_mess {
+    align-self: flex-start;
+    background-color: var(--bz-light);
+}
+.time_mess {
+    position: absolute;
+    font-size: 0.5rem;
+    color: var(--bz-dark);
+    bottom: 1px;
+    right: 3px;
 }
 .write_message {
     height: 3.75rem;
