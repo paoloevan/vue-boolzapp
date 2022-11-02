@@ -12,3 +12,17 @@ img {
     --bz-secondary: #8edbfd;
     --bz-gray: #eaebeb;
 }
+
+/*  Background */
+.backgroud{
+    height: 100vh;
+}
+.backgroud_up {
+    background-color: var(--bz-primary-dark);
+    height: 15%;
+}
+.backgroud_bottom {
+    background-color: var(--bz-gray-dark);
+    height: 85%;
+}
+
