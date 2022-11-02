@@ -17,10 +17,12 @@ img {
     --bz-light: #ffffff;
     --bz-secondary: #8edbfd;
     --bz-gray: #eaebeb;
+    --bz-dark: #b0b0b1;
+    --bz-darker: #60839a;
 }
 
 /*  Background */
-.backgroud {
+.main_page {
     height: 100vh;
     position: relative;
 }
@@ -42,9 +44,44 @@ img {
     margin-right: auto;
     left: 50%;
     top: 50%;
-    background-color: red;
     height: 95%;
     width: 80%;
     transform: translate(-50%, -50%);
 
+}
+.user_name {
+    font-size: 0.75rem;
+}
+/* left side */
+.profile_card {
+    height: 3rem;
+    width: 100%;
+    background-color: var(--bz-gray);
+    border-right: 1px solid var(--bz-gray-dark);
+}
+.profile_card img {
+    border-radius: 50%;
+}
+.actions {
+ color: var(--bz-dark);
+}
+.actions i {
+    padding: 0.5rem;
+}
+.notification {
+    height: 3.5rem;
+    width: 100%;
+    background-color: var(--bz-secondary);
+    font-size: 0.75rem;
+}
+.notification i{
+    font-size: 1rem;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: var(--bz-secondary);
+    background-color: white;
+}
+.notification a{
+    color: var(--bz-darker);
 }
