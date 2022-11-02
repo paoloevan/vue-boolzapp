@@ -8,7 +8,7 @@ Visualizzazione dinamica della lista contatti: tramite la direttiva v-for,
 const contacts = [
     {
         name: 'Michele',
-        avatar: '_1',
+        avatar: 'avatar_1.jpg',
         visible: true,
         messages: [
             {
@@ -30,7 +30,7 @@ const contacts = [
     },
     {
         name: 'Fabio',
-        avatar: '_2',
+        avatar: 'avatar_2.jpg',
         visible: true,
         messages: [
             {
@@ -52,7 +52,7 @@ const contacts = [
     },
     {
         name: 'Samuele',
-        avatar: '_3',
+        avatar: 'avatar_3.jpg',
         visible: true,
         messages: [
             {
@@ -74,7 +74,7 @@ const contacts = [
     },
     {
         name: 'Alessandro B.',
-        avatar: '_4',
+        avatar: 'avatar_4.jpg',
         visible: true,
         messages: [
             {
@@ -91,7 +91,7 @@ const contacts = [
     },
     {
         name: 'Alessandro L.',
-        avatar: '_5',
+        avatar: 'avatar_5.jpg',
         visible: true,
         messages: [
             {
@@ -108,7 +108,7 @@ const contacts = [
     },
     {
         name: 'Claudia',
-        avatar: '_6',
+        avatar: 'avatar_6.jpg',
         visible: true,
         messages: [
             {
@@ -130,7 +130,7 @@ const contacts = [
     },
     {
         name: 'Federico',
-        avatar: '_7',
+        avatar: 'avatar_7.jpg',
         visible: true,
         messages: [
             {
@@ -147,7 +147,7 @@ const contacts = [
     },
     {
         name: 'Davide',
-        avatar: '_8',
+        avatar: 'avatar_8.jpg',
         visible: true,
         messages: [
             {
