@@ -1,4 +1,14 @@
+/* Common rules */
+
 *{margin: 0;padding: 0;box-sizing: border-box;}
 img {
     max-width: 100%;
+}
+:root{
+    --bz-gray-dark: #dadad2;
+    --bz-primary-dark: #009789;
+    --bz-primary: #d5f8bb;
+    --bz-light: #ffffff;
+    --bz-secondary: #8edbfd;
+    --bz-gray: #eaebeb;
 }
