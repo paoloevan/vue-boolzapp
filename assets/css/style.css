@@ -56,7 +56,7 @@ img {
 
 /* left side */
 .profile_card {
-    height: 3rem;
+    height: 3.5rem;
     width: 100%;
     background-color: var(--bz-gray);
     border-right: 1px solid var(--bz-gray-dark);
@@ -75,7 +75,7 @@ img {
 }
 
 .notification {
-    height: 3.5rem;
+    height: 3.75rem;
     width: 100%;
     background-color: var(--bz-secondary);
     font-size: 0.75rem;
@@ -109,4 +109,24 @@ img {
     width: 100%;
     border: none;
     font-size: 0.75rem;
+}
+/* chat di destra */
+.last_access {
+    color: var(--bz-darker);
+}
+.current_messages {
+    height: 100px;
+    background-image: url(../img/mine.jpg)
+}
+.write_message {
+    height: 3.75rem;
+    font-size: 1.5rem;
+    background-color: var(--bz-gray);
+    color: var(--bz-darker);
+}
+.write_message input {
+    height: 70%;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 5px;
 }
