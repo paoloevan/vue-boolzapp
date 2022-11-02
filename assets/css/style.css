@@ -19,6 +19,7 @@ img {
     --bz-gray: #eaebeb;
     --bz-dark: #b0b0b1;
     --bz-darker: #60839a;
+    --bz-active: #e8eaeb;
 }
 
 /*  Background */
@@ -114,6 +115,21 @@ img {
     height: calc(100% - 151px);
     background-color: var(--bz-light);
 }
+.all_chat .user_name {
+    font-size: 0.9rem;
+}
+.all_chat .last_access {
+    font-size: 0.75rem;
+}
+.all_chat .profile_card {
+    height: 4rem;
+}
+.all_chat hr {
+    background-color: var(--bz-gray-dark);
+    height: 1px;
+    width: 100%;
+    margin: 0;
+}
 /* chat di destra */
 .current_chat {
     height: 100%;
@@ -160,4 +176,7 @@ img {
     font-size: 0.75rem;
     border: none;
     border-radius: 5px;
+}
+.active_chat {
+    background-color: var(--bz-active);
 }
