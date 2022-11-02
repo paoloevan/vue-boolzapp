@@ -1,10 +1,16 @@
 /* Common rules */
 
-*{margin: 0;padding: 0;box-sizing: border-box;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 img {
     max-width: 100%;
 }
-:root{
+
+:root {
     --bz-gray-dark: #dadad2;
     --bz-primary-dark: #009789;
     --bz-primary: #d5f8bb;
@@ -14,15 +20,31 @@ img {
 }
 
 /*  Background */
-.backgroud{
+.backgroud {
     height: 100vh;
+    position: relative;
 }
+
 .backgroud_up {
     background-color: var(--bz-primary-dark);
     height: 15%;
 }
+
 .backgroud_bottom {
     background-color: var(--bz-gray-dark);
     height: 85%;
 }
 
+/* chat */
+.main_chat {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    top: 50%;
+    background-color: red;
+    height: 95%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+
+}
