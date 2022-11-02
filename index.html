@@ -17,7 +17,7 @@
 <body>
 
 
-    <div class="main_page">
+    <div class="main_page" id="app">
         <div class="backgroud_up"></div>
         <div class="backgroud_bottom"></div>
 
@@ -62,21 +62,23 @@
                 <!-- elenco chat -->
                 <div class="all_chat">
 
-                    <div class="profile_card d-flex p-2 active_chat">
-
-                        <div class="d-flex">
+                    <template v-for="(contact, index) in contacts">
+                        <div class="profile_card d-flex p-2" :id="index === activeChat ? 'active_chat' : ''">
                             <div class="d-flex">
-                                <img class="" src="./assets/img/avatar_io.jpg" alt="">
-                                <div class="ms-3">
-                                    <div class="user_name d-flex">Michele</div>
-                                    <div class="last_access">
-                                        Ultimo messaggio inviato
+                                <div class="d-flex">
+                                    <img :src="'./assets/img/' + contacts[index].avatar" alt="">
+                                    <div class="ms-3">
+                                        <div class="user_name d-flex">{{contacts[index].name}}</div>
+                                        <div class="last_access">
+                                            Ultimo messaggio inviato
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <hr>
+                        <hr>
+                    </template>
+
 
                 </div>
             </div>
