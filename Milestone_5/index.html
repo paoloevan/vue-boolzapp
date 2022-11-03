@@ -48,7 +48,7 @@
                     <i class=" d-flex justify-content-center align-items-center fa-solid fa-bell-slash"></i>
                     <div class="ps-2">
                         <div>Ricevi notifiche di nuovi messaggi</div>
-                        <a href="#">Attiva notiiche desktop</a>
+                        <a href="#">Attiva notifiche desktop</a>
 
                     </div>
                 </div>
@@ -71,7 +71,8 @@
                                 <div class="ms-3">
                                     <div class="user_name d-flex">{{contact.name}}</div>
                                     <div class="last_access">
-                                        Ultimo messaggio inviato
+                                        {{contact.messages[contact.messages.length - 1].message}}
+
                                     </div>
                                 </div>
                             </div>
