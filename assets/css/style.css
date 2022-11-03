@@ -113,6 +113,7 @@ img {
 }
 .all_chat {
     height: calc(100% - 151px);
+    overflow: auto;
     background-color: var(--bz-light);
 }
 .all_chat .user_name {
