@@ -106,10 +106,11 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
+
                 <!-- messaggi in chat -->
                 <div v-for="(contact, index) in contacts" class="current_messages d-flex flex-column">
                     <div v-for="(message, i) in contact.messages" v-if="index === activeChat"
-                        :class="contact.messages[i].status === 'sent' ? 'my_mess' : 'received_mess'">
+                        :class="message.status === 'sent' ? 'my_mess' : 'received_mess'">
                         {{message.message}}
                         <div class="time_mess">15:30</div>
 
