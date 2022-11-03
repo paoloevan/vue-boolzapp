@@ -183,6 +183,6 @@ img {
     border-radius: 5px;
 }
 
-#active_chat {
+.active_chat {
     background-color: var(--bz-active);
 }

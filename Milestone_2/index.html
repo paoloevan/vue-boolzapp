@@ -63,7 +63,7 @@
                 <div class="all_chat">
 
                     <template v-for="(contact, index) in contacts">
-                        <div class="profile_card d-flex p-2" :id="index === activeChat ? 'active_chat' : ''">
+                        <div class="profile_card d-flex p-2" :class="index === activeChat ? 'active_chat' : ''">
                             <div class="d-flex">
                                 <div class="d-flex">
                                     <img :src="'./assets/img/' + contact.avatar" alt="">
@@ -107,15 +107,12 @@
                     </div>
                 </div>
                 <!-- messaggi in chat -->
-                <div class="current_messages d-flex flex-column">
-                    <div class="my_mess">Hai portato a spasso il cane?
+                <div v-for="(contact, index) in contacts" class="current_messages d-flex flex-column">
+                    <div v-for="(message, i) in contact.messages" v-if="index === activeChat"
+                        :class="contact.messages[i].status === 'sent' ? 'my_mess' : 'received_mess'">
+                        {{message.message}}
                         <div class="time_mess">15:30</div>
-                    </div>
-                    <div class="my_mess">Ricordati di stendere i panni
-                        <div class="time_mess">15:50</div>
-                    </div>
-                    <div class="received_mess">Tutto fatto!
-                        <div class="time_mess">16:15</div>
+
                     </div>
                 </div>
 

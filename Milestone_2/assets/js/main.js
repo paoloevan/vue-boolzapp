@@ -1,4 +1,6 @@
+/**
 
+Click sul contatto mostra la conversazione del contatto cliccato */
 
 
 const { createApp } = Vue
