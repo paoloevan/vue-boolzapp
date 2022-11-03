@@ -149,7 +149,7 @@ img {
     font-size: 0.8rem;
 }
 .my_mess, .received_mess {
-    width: 35%;
+    max-width: 300px;
     padding: 0.75rem;
     border-radius: 5px;
     margin-bottom: 0.5rem;

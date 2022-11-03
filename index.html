@@ -66,9 +66,9 @@
                         <div class="profile_card d-flex p-2" :id="index === activeChat ? 'active_chat' : ''">
                             <div class="d-flex">
                                 <div class="d-flex">
-                                    <img :src="'./assets/img/' + contacts[index].avatar" alt="">
+                                    <img :src="'./assets/img/' + contact.avatar" alt="">
                                     <div class="ms-3">
-                                        <div class="user_name d-flex">{{contacts[index].name}}</div>
+                                        <div class="user_name d-flex">{{contact.name}}</div>
                                         <div class="last_access">
                                             Ultimo messaggio inviato
                                         </div>
