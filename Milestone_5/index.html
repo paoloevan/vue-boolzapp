@@ -116,7 +116,7 @@
                             <div v-if="activeDropdown === i" :style="dropdown ? 'display:block' : ''" class="dropdown">
                                 
                                     <div>{{message.info}}</div>
-                                    <div>{{message.delete}}</div>
+                                    <div class="delete_mess" @click="deleteMessage(index,i)">{{message.delete}}</div>
 
                             </div>
                             <div class="time_mess">15:30</div>

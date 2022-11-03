@@ -215,3 +215,7 @@ img {
 .active_chat {
     background-color: var(--bz-active) !important;
 }
+
+.delete_mess {
+    cursor: pointer;
+}

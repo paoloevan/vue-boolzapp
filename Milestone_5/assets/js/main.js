@@ -382,9 +382,12 @@ createApp({
                     details.info = 'Message info',
                     details.delete = 'Delete message'
                 })
-                //contact.messages.push(infoDelete)
             });
             this.dropdown = !this.dropdown
+        },
+        deleteMessage(index, i) {
+            this.contacts[index].messages.splice(i, 1)
+            this.dropdown = false
         }
     }
 }).mount('#app')
