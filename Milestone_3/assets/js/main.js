@@ -13,6 +13,7 @@ createApp({
     data() {
         return {
             activeChat: 0,
+            newMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -177,6 +178,18 @@ createApp({
                 }
             ]
 
+        }
+    },
+    methods: {
+        sendMessage() {
+            if (this.newMessage.length > 0){
+                const newMess = {
+                    message: this.newMessage,
+                    status: 'sent'
+                }
+                this.contacts[this.activeChat].messages.push(newMess)
+                this.newMessage = ''
+            }
         }
     }
 }).mount('#app')

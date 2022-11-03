@@ -121,7 +121,7 @@
                 <!-- form per scrivere messaggio -->
                 <div class="px-5 write_message d-flex justify-content-between align-items-center">
                     <i class="flex-grow-0 col fa-regular fa-face-smile"></i>
-                    <input class="ps-2 col-10" type="text" placeholder="Scrivi un messaggio">
+                            <input @keyup.enter="sendMessage" v-model="newMessage" class="ps-2 col-10" type="text" placeholder="Scrivi un messaggio">
                     <i class="flex-grow-0 col fa-solid fa-microphone"></i>
                 </div>
             </div>
