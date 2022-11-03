@@ -184,5 +184,5 @@ img {
 }
 
 .active_chat {
-    background-color: var(--bz-active);
+    background-color: var(--bz-active) !important;
 }

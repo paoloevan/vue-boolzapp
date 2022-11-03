@@ -1,6 +1,10 @@
 /**
+Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+“enter” il testo viene aggiunto al thread sopra, come messaggio verde
 
-Click sul contatto mostra la conversazione del contatto cliccato */
+Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+un “ok” come risposta, che apparirà dopo 1 secondo.
+*/
 
 
 const { createApp } = Vue

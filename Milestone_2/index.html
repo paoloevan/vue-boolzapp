@@ -63,15 +63,13 @@
                 <div class="all_chat">
 
                     <template v-for="(contact, index) in contacts">
-                        <div class="profile_card d-flex p-2" :class="index === activeChat ? 'active_chat' : ''">
+                        <div @click="activeChat = index" class="profile_card d-flex p-2" :class="index === activeChat ? 'active_chat' : ''">
                             <div class="d-flex">
-                                <div class="d-flex">
-                                    <img :src="'./assets/img/' + contact.avatar" alt="">
-                                    <div class="ms-3">
-                                        <div class="user_name d-flex">{{contact.name}}</div>
-                                        <div class="last_access">
-                                            Ultimo messaggio inviato
-                                        </div>
+                                <img :src="'./assets/img/' + contact.avatar" alt="">
+                                <div class="ms-3">
+                                    <div class="user_name d-flex">{{contact.name}}</div>
+                                    <div class="last_access">
+                                        Ultimo messaggio inviato
                                     </div>
                                 </div>
                             </div>
