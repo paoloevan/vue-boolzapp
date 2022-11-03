@@ -1,0 +1,189 @@
+/* Common rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --bz-gray-dark: #dadad2;
+    --bz-primary-dark: #009789;
+    --bz-primary: #d5f8bb;
+    --bz-light: #ffffff;
+    --bz-secondary: #8edbfd;
+    --bz-gray: #eaebeb;
+    --bz-dark: #b0b0b1;
+    --bz-darker: #60839a;
+    --bz-active: #e8eaeb;
+}
+
+/*  Background */
+.main_page {
+    height: 100vh;
+    position: relative;
+}
+
+.backgroud_up {
+    background-color: var(--bz-primary-dark);
+    height: 15%;
+}
+
+.backgroud_bottom {
+    background-color: var(--bz-gray-dark);
+    height: 85%;
+}
+
+/* chat */
+.main_chat {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    top: 50%;
+    height: 95%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+
+}
+
+.user_name {
+    font-size: 0.75rem;
+}
+
+/* left side */
+.profile_card {
+    height: 3.5rem;
+    width: 100%;
+    background-color: var(--bz-gray);
+    border-right: 1px solid var(--bz-gray-dark);
+}
+
+.profile_card img {
+    border-radius: 50%;
+}
+
+.actions {
+    color: var(--bz-dark);
+}
+
+.actions i {
+    padding: 0.5rem;
+}
+
+.notification {
+    height: 3.75rem;
+    width: 100%;
+    background-color: var(--bz-secondary);
+    font-size: 0.75rem;
+}
+
+.notification i {
+    font-size: 1rem;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    color: var(--bz-secondary);
+    background-color: white;
+}
+
+.notification a {
+    color: var(--bz-darker);
+}
+
+.start_new {
+    background-color: var(--bz-gray);
+}
+
+.start_new i {
+    font-size: 0.9rem;
+    background-color: var(--bz-light);
+    color: var(--bz-dark);
+    padding: 0.5rem 1rem;
+}
+
+.start_new input {
+    width: 100%;
+    border: none;
+    font-size: 0.75rem;
+}
+.all_chat {
+    height: calc(100% - 151px);
+    overflow: auto;
+    background-color: var(--bz-light);
+}
+.all_chat .user_name {
+    font-size: 0.9rem;
+}
+.all_chat .last_access {
+    font-size: 0.75rem;
+}
+.all_chat .profile_card {
+    height: 4rem;
+}
+.all_chat hr {
+    background-color: var(--bz-gray-dark);
+    height: 1px;
+    width: 100%;
+    margin: 0;
+    border: none;
+}
+.all_chat .profile_card {
+    background-color: transparent;
+}
+/* chat di destra */
+.current_chat {
+    height: 100%;
+}
+.last_access {
+    color: var(--bz-darker);
+}
+.current_messages {
+    height: calc(100% - 112px);
+    padding: 3rem;
+    overflow: auto;
+    background-image: url(../img/mine.jpg);
+    font-size: 0.8rem;
+}
+.my_mess, .received_mess {
+    max-width: 300px;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.my_mess {
+    align-self: flex-end;
+    background-color: var(--bz-primary);
+}
+.received_mess {
+    align-self: flex-start;
+    background-color: var(--bz-light);
+}
+.time_mess {
+    position: absolute;
+    font-size: 0.5rem;
+    color: var(--bz-dark);
+    bottom: 1px;
+    right: 3px;
+}
+.write_message {
+    height: 3.75rem;
+    font-size: 1.5rem;
+    background-color: var(--bz-gray);
+    color: var(--bz-darker);
+}
+.write_message input {
+    height: 70%;
+    font-size: 0.75rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.active_chat {
+    background-color: var(--bz-active) !important;
+}
