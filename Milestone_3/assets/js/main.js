@@ -1,9 +1,5 @@
 /**
-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
-“enter” il testo viene aggiunto al thread sopra, come messaggio verde
 
-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
-un “ok” come risposta, che apparirà dopo 1 secondo.
 */
 
 
@@ -189,6 +185,13 @@ createApp({
                 }
                 this.contacts[this.activeChat].messages.push(newMess)
                 this.newMessage = ''
+                const newReceived = {
+                    message: 'Ok',
+                    statu: 'received'
+                }
+                setTimeout(() => {
+                    this.contacts[this.activeChat].messages.push(newReceived)
+                }, 1000);
             }
         }
     }

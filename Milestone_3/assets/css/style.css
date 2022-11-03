@@ -145,6 +145,7 @@ img {
 .current_messages {
     height: calc(100% - 112px);
     padding: 3rem;
+    overflow: auto;
     background-image: url(../img/mine.jpg);
     font-size: 0.8rem;
 }
