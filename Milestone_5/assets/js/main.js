@@ -11,6 +11,8 @@ createApp({
         return {
             activeChat: 0,
             newMessage: '',
+            dropdown: false,
+            activeDropdown: 0,
             searchContact: '',
             contacts: [
                 {
@@ -372,6 +374,17 @@ createApp({
             })
             this.filtered = contacts
             console.log(this.filtered);
+        },
+        openDropdown(i){
+            this.contacts.forEach(contact => {
+                this.activeDropdown = i
+                contact.messages.forEach(details => {
+                    details.info = 'Message info',
+                    details.delete = 'Delete message'
+                })
+                //contact.messages.push(infoDelete)
+            });
+            this.dropdown = !this.dropdown
         }
     }
 }).mount('#app')

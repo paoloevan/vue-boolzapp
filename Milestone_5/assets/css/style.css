@@ -149,12 +149,40 @@ img {
     background-image: url(../img/mine.jpg);
     font-size: 0.8rem;
 }
-.my_mess, .received_mess {
+.my_mess,
+.received_mess {
+    min-width: 100px;
     max-width: 300px;
     padding: 0.75rem;
     border-radius: 5px;
     margin-bottom: 0.5rem;
     position: relative;
+}
+.my_mess i,
+.received_mess i{
+    font-size: 0.75rem;
+    color: var(--bz-dark);
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    cursor: pointer;
+    display: none;
+}
+.my_mess:hover i,
+.received_mess:hover i {
+    display: block;
+}
+.dropdown {
+    position: absolute;
+    z-index: 9;
+    width: 8rem;
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    right: 5px;
+    top: 50%;
+    background-color: var(--bz-gray);
+    display: none;
 }
 .my_mess {
     align-self: flex-end;
