@@ -391,7 +391,8 @@ createApp({
         },
         lastMessage(index){
             console.log(this.contacts[index].messages[this.contacts[index].messages.length - 1].date);
-            const lastMess = DateTime.toLocaleString(this.contacts[index].messages[this.contacts[index].messages.length - 1].date)
+            const dt = this.contacts[index].messages[this.contacts[index].messages.length - 1].date;
+            const lastMess = dt.toLocaleString(this.contacts[index].messages[this.contacts[index].messages.length - 1].date)
             return lastMess
         }
     }
