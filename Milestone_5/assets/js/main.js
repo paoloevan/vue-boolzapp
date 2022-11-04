@@ -390,9 +390,10 @@ createApp({
             this.dropdown = false
         },
         lastMessage(index){
-            console.log(this.contacts[index].messages[this.contacts[index].messages.length - 1].date);
-            const dt = this.contacts[index].messages[this.contacts[index].messages.length - 1].date;
-            const lastMess = dt.toLocaleString(this.contacts[index].messages[this.contacts[index].messages.length - 1].date)
+            //console.log(this.contacts[index].messages[this.contacts[index].messages.length - 1].date);
+            const dt = this.contacts[index].messages[this.contacts[index].messages.length - 1].date
+            const lastMess = dt.toLocaleString(DateTime.TIME_SIMPLE)
+            //lastMess.toFormat('f')
             return lastMess
         }
     }
