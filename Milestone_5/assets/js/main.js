@@ -3,8 +3,9 @@ Visualizzazione ora e ultimo messaggio
 inviato/ricevuto nella lista dei contatti
 */
 
-const {DateTime} = luxon
+const { DateTime } = luxon
 const { createApp } = Vue;
+
 
 createApp({
     data() {
@@ -366,21 +367,21 @@ createApp({
             const contacts = this.contacts.filter(contact => {
                 const contactLower = contact.name.toLowerCase()
                 if (contact.name.startsWith(this.searchContact)
-                || contactLower.startsWith(this.searchContact)) {
+                    || contactLower.startsWith(this.searchContact)) {
 
                     return contact
-                    
+
                 }
             })
             this.filtered = contacts
             console.log(this.filtered);
         },
-        openDropdown(i){
+        openDropdown(i) {
             this.contacts.forEach(contact => {
                 this.activeDropdown = i
                 contact.messages.forEach(details => {
                     details.info = 'Message info',
-                    details.delete = 'Delete message'
+                        details.delete = 'Delete message'
                 })
             });
             this.dropdown = !this.dropdown
@@ -389,14 +390,14 @@ createApp({
             this.contacts[index].messages.splice(i, 1)
             this.dropdown = false
         },
-        lastMessage(index){
-            //console.log(this.contacts[index].messages[this.contacts[index].messages.length - 1].date);
-            const dt = luxon.DateTime
-            //const dt = this.contacts[index].messages[this.contacts[index].messages.length - 1].date
-            
-            const lastMess = dt.setLocale('fr').toLocaleString(this.contacts[index].messages[this.contacts[index].messages.length - 1].date)
-            //lastMess.toFormat('f')
-            return lastMess
+        lastMessage(index) {
+            // const dt = luxon.DateTime
+            // const date = this.contacts[index].messages[this.contacts[index].messages.length - 1].date
+            // const lastMess = date.toLocaleString(dt.DATETIME_SHORT)
+            // return lastMess
+            const date = this.contacts[index].messages[this.contacts[index].messages.length - 1].date
+            const newDate = date.toLocaleString(DateTime.DATETIME_MED);
+            return newDate
         }
     }
 }).mount('#app')
