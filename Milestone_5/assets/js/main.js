@@ -3,8 +3,8 @@ Visualizzazione ora e ultimo messaggio
 inviato/ricevuto nella lista dei contatti
 */
 
-
-const { createApp } = Vue
+const {DateTime} = luxon
+const { createApp } = Vue;
 
 createApp({
     data() {
@@ -363,7 +363,7 @@ createApp({
         },
         filterContacts() {
             //filtro i nomi che iniziano con v-model
-            const contacts = this.contacts.filter((contact, i) => {
+            const contacts = this.contacts.filter(contact => {
                 const contactLower = contact.name.toLowerCase()
                 if (contact.name.startsWith(this.searchContact)
                 || contactLower.startsWith(this.searchContact)) {
@@ -388,8 +388,14 @@ createApp({
         deleteMessage(index, i) {
             this.contacts[index].messages.splice(i, 1)
             this.dropdown = false
+        },
+        lastMessage(index){
+            console.log(this.contacts[index].messages[this.contacts[index].messages.length - 1].date);
+            const lastMess = DateTime.toLocaleString(this.contacts[index].messages[this.contacts[index].messages.length - 1].date)
+            return lastMess
         }
     }
 }).mount('#app')
 
 
+//dt = DateTime.fromObject({day: 22, hour: 12 }, { zone: 'Europe/Paris', numberingSystem: 'beng'})

@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <!-- nuova chat -->
+                <!-- ricerca chat -->
                 <div class="start_new p-1 d-flex">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input @keyup="filterContacts" v-model="searchContact" class="p-1" type="text" name="" id=""
@@ -71,7 +71,11 @@
                                 <div class="ms-3">
                                     <div class="user_name d-flex">{{contact.name}}</div>
                                     <div class="last_access">
-                                        {{contact.messages[contact.messages.length - 1].message}}
+                                        {{contact.messages[contact.messages.length - 1].message}} <br>
+                                        <!-- {{contact.messages[contact.messages.length - 1].date}} -->
+                                        <!-- {{dt = DateTime.fromObject({contact.messages[contact.messages.length - 1].date}, { zone: 'Europe/Paris',
+                                        numberingSystem: 'beng'})}} -->
+                                        {{lastMessage(index)}}
 
                                     </div>
                                 </div>
@@ -111,13 +115,14 @@
                 <!-- messaggi in chat -->
                 <template v-for="(contact, index) in contacts">
                     <div v-if="index === activeChat" class="current_messages d-flex flex-column">
-                        <div v-for="(message, i) in contact.messages" :class="message.status === 'sent' ? 'my_mess' : 'received_mess'">
+                        <div v-for="(message, i) in contact.messages"
+                            :class="message.status === 'sent' ? 'my_mess' : 'received_mess'">
                             {{message.message}}
                             <i @click="openDropdown(i)" class="fa-solid fa-chevron-down"></i>
                             <div v-if="activeDropdown === i" :style="dropdown ? 'display:block' : ''" class="dropdown">
-                                
-                                    <div>{{message.info}}</div>
-                                    <div class="delete_mess" @click="deleteMessage(index,i)">{{message.delete}}</div>
+
+                                <div>{{message.info}}</div>
+                                <div class="delete_mess" @click="deleteMessage(index,i)">{{message.delete}}</div>
 
                             </div>
                             <div class="time_mess">15:30</div>
@@ -139,6 +144,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
