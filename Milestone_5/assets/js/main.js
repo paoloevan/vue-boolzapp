@@ -391,8 +391,10 @@ createApp({
         },
         lastMessage(index){
             //console.log(this.contacts[index].messages[this.contacts[index].messages.length - 1].date);
-            const dt = this.contacts[index].messages[this.contacts[index].messages.length - 1].date
-            const lastMess = dt.toLocaleString(DateTime.TIME_SIMPLE)
+            const dt = luxon.DateTime
+            //const dt = this.contacts[index].messages[this.contacts[index].messages.length - 1].date
+            
+            const lastMess = dt.setLocale('fr').toLocaleString(this.contacts[index].messages[this.contacts[index].messages.length - 1].date)
             //lastMess.toFormat('f')
             return lastMess
         }
