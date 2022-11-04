@@ -396,7 +396,10 @@ createApp({
             // const lastMess = date.toLocaleString(dt.DATETIME_SHORT)
             // return lastMess
             const date = this.contacts[index].messages[this.contacts[index].messages.length - 1].date
-            const newDate = date.toLocaleString(DateTime.DATETIME_MED);
+            //console.log(this.contacts[index].messages[this.contacts[index].messages.length - 1].date);
+            const dateTime = DateTime.fromFormat(date, "dd mm yyyy")
+            console.log(dateTime);
+            const newDate = dateTime.toLocaleString(DateTime.DATETIME_MED);
             return newDate
         }
     }
