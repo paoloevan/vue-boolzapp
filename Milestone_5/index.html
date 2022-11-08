@@ -63,24 +63,29 @@
                 <!-- elenco chat -->
                 <div class="all_chat">
 
-                    <template v-for="(contact, index) in filtered">
-                        <div @click="activeChat = index" class="profile_card d-flex p-2"
-                            :class="index === activeChat ? 'active_chat' : ''">
-                            <div class="d-flex">
-                                <img :src="'./assets/img/' + contact.avatar" alt="">
-                                <div class="ms-3">
-                                    <div class="user_name d-flex">{{contact.name}}</div>
-                                    <div class="last_access">
-                                        {{contact.messages[contact.messages.length - 1].message}} <br>
-                                        <!-- {{contact.messages[contact.messages.length - 1].date}} -->
-                                        <!-- {{dt = DateTime.fromObject({contact.messages[contact.messages.length - 1].date}, { zone: 'Europe/Paris',
-                                        numberingSystem: 'beng'})}} -->
-                                        {{lastMessage(index)}}
-
+                    <template v-for="(contact, index) in contacts">
+                        <div v-show="contact.visible" class="visible">
+                            <div @click="activeChat = index" class="profile_card d-flex p-2"
+                                :class="index === activeChat ? 'active_chat' : ''">
+                                <div class="d-flex">
+                                    <img :src="'./assets/img/' + contact.avatar" alt="">
+                                    <div class="ms-3">
+                                        <div class="user_name d-flex">{{contact.name}}</div>
+                                        <div class="last_access">
+                                            {{contact.messages[contact.messages.length - 1].message}} <br>
+                                            <!-- {{contact.messages[contact.messages.length - 1].date}} -->
+                                            <!-- {{dt = DateTime.fromObject({contact.messages[contact.messages.length - 1].date}, { zone: 'Europe/Paris',
+                                            numberingSystem: 'beng'})}} -->
+                                            <!-- {{lastMessage(index)}} -->
+                                            {{contact.visible}}
+    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
                         <hr>
                     </template>
 

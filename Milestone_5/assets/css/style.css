@@ -57,10 +57,14 @@ img {
 
 /* left side */
 .profile_card {
+    display: block;
     height: 3.5rem;
     width: 100%;
     background-color: var(--bz-gray);
     border-right: 1px solid var(--bz-gray-dark);
+}
+.visible {
+    display: block;
 }
 
 .profile_card img {
